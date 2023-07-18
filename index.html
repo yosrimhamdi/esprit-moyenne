@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<html>
+<head id="Head1"><link rel="SHORTCUT ICON" href="../images/favicon.ico" /><title>
+
+</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <link href="../Contents/Css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Contents/Css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="../Contents/Css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Contents/Css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="../Contents/Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../Contents/Scripts/bootstrap.js" type="text/javascript"></script>
+</head>
+<body>
+    <form method="post" action="./Resultat.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EA1B1D3E" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAZOUI4qr6q7rDRQbvHOSBkWgUFlgNU1eucH/1aaMMUqPuXQui1jYNTKiogd3neNrC2FmY1eVi1nMJQpGSfLzVMZBOr0raactFgeinilURezkZu2gaJWqNrGkU8VTHzcbq6tRDsIyl3k83OlF4cnV2eLimabxKgtYLWPoBhe4PgSbQ==" />
+</div>
+    <div class="container-fluid">
+        <div id="wrap">
+        <br /><br />
+            <!-- Fixed navbar -->
+            
+            
+            
+            <div class="row">
+                <div class="navbar  navbar-fixed-top">
+                    <div class=" navbar-header ">
+                        <div class="container">
+                            <div class="img-responsive">
+                                <img class="img-responsive" alt="" src="../Contents/Img/logo.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-inner">
+                        <div class="container">
+                            <div class="text-right ">
+                                <div class="form-group">
+                                    <span id="Label2" class="h4 text-info">Yosri MHAMDI</span>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <a id="LinkButton1" class="btn-link" href="javascript:__doPostBack(&#39;ctl00$LinkButton1&#39;,&#39;&#39;)">Se déconnecter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-inner">
+                        <div class="container">
+                            <ul class="nav navbar-nav pull-left ">
+                                <li><a href="Accueil.aspx">Accueil</a></li>
+                                <li><a href="Emplois.aspx">Emploi du temps</a></li>
+                                <li><a href="ReclamationEOL.aspx">Reclamation</a></li>
+                                <li><a href="Resultat.aspx">Notes</a></li>
+                               <li><a href="ECTSCharguia.aspx">Résultat</a></li>
+                                    
+                            
+                               <li><a href="CCNA1.aspx">CCNA</a></li>
+                                <li><a href="evaluation.aspx">Evaluation</a></li>
+
+                                  <li><a href="LANG2.aspx">Niveau Langues</a></li>
+                           
+                               <li>
+                            
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                 $(document).ready(function () {
+                     var url = window.location.pathname;
+                     var substr = url.split('/');
+                     var urlaspx = substr[substr.length - 1];
+                     $('.nav navbar-nav pull-left').find('.h3').removeClass('h3');
+                     $('.nav li a').each(function () {
+                         if (this.href.indexOf(urlaspx) >= 0) {
+                             $(this).parent().addClass('h3');
+                         }
+                     });
+                 });
+                   </script>
+                </div>
+              
+            </div>
+
+             
+             
+            
+            <div class="row">
+                <div class="span3" style="margin-top: 8%;">
+                    
+                </div>
+                <!-- Begin page content -->
+                <div class="span12" style="margin-top: 10%;">
+                    <div class="container-fluid">
+                        
+    
+            
+            
+              <center><h1> Notes Des Modules</h1></center>
+                
+                <div id="ContentPlaceHolder1_Panel1">
+	
+               
+                <center>
+                 
+
+            <br />
+                    <div>
+		<table class="list-inline" cellspacing="0" cellpadding="3" rules="all" id="ContentPlaceHolder1_GridView1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;border-collapse:collapse;">
+			<tr style="color:White;background-color:#A80000;font-weight:bold;">
+				<th scope="col">DESIGNATION</th><th scope="col">NOM ENSEIGNANT</th><th scope="col">NOTE CC</th><th scope="col">NOTE TP</th><th scope="col">NOTE EXAM PRINCIPALE</th>
+			</tr><tr style="color:#000066;">
+				<td>Algorithmique et structure de donn&#233;es</td><td>Farouk JELIDI</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_0"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_0">5</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_0">15,5</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Analyse num&#233;rique</td><td>ZGHAL  Mohamed Khalil</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_1">0</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_1">0</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_1">0</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Bases de Donn&#233;es</td><td>Sarra SEBAI</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_2">12</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_2">13</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_2">17,5</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Calcul scientifique avec Python</td><td>ZGHAL  Mohamed Khalil</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_3"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_3">12,5</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_3">12,5</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Communication, Culture et Citoyennet&#233;  A1</td><td>THAMEUR CHARNI</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_4"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_4">11,75</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_4">14,25</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Communication, Culture et Citoyennet&#233; F1</td><td>SAMIA HAMDI</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_5"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_5">10</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_5">9,25</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Conception par Objet et Programmation Java</td><td>KARRAY GARGOURI</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_6">16</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_6">13</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_6">0</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Fondements des R&#233;seaux</td><td>MOHAMED HAJJI</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_7">15,25</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_7">8,5</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_7">0</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Langage de mod&#233;lisation (UML)</td><td>Skander SAADAOUI</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_8">11,75</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_8">0</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_8">5,5</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Programmation proc&#233;durale</td><td>Nejib AZAIZ</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_9"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_9"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_9">16,5</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Sys. De Gestion de Bases de Donn&#233;es</td><td>Sarra SEBAI</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_10"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_10">16</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_10">16</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Syst&#232;me et scripting</td><td>Mohamed Amine LIMAM</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_11"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_11"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_11">14</span>
+                                </td>
+			</tr><tr style="color:#000066;">
+				<td>Technologies Web 2.0</td><td>Rym ALOUANE</td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label3_12"></span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label4_12">3</span>
+                                </td><td>
+                                    <span id="ContentPlaceHolder1_GridView1_Label2_12">0</span>
+                                </td>
+			</tr>
+		</table>
+	</div>
+
+                    
+                <hr />
+                <br />
+                
+</div>
+                <center>
+                <div>
+	<table cellspacing="0" cellpadding="4" rules="cols" id="ContentPlaceHolder1_GridView2" style="color:Black;background-color:White;border-color:#DEDFDE;border-width:1px;border-style:None;border-collapse:collapse;">
+		<tr style="color:White;background-color:#6B696B;font-weight:bold;">
+			<th scope="col">Modules</th><th scope="col">Notes Rattrapage</th>
+		</tr><tr style="background-color:#F7F7DE;">
+			<td>Conception par Objet et Programmation Java</td><td>17</td>
+		</tr><tr style="background-color:White;">
+			<td>Technologies Web 2.0</td><td>17</td>
+		</tr>
+	</table>
+</div>
+                
+                
+                
+                
+                
+                </div>
+                <div class="col-xs-1">
+               
+            </div>
+            </div>
+            </center>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Wrap -->
+        <!-- Begin page footer -->
+        
+        
+        
+    </div>
+    <br /><br /><br />
+    <br /><br /><br />
+    <br /><br /><br />
+    <br /><br /><br />
+    <br /><br /><br />
+    <br /><br /><br />
+    <br />
+    <div id="footer">
+           
+            
+      <div class="container">
+      <hr />
+        <p class="text-center">
+                    © 2016 Esprit, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </div>
+    
+        </div>
+           <input type="hidden" name="ctl00$H1" id="H1" value="06234357" />
+                                    <input type="hidden" name="ctl00$H2" id="H2" value="06234357" />
+                                    <input type="hidden" name="ctl00$H3" id="H3" value="06234357" />
+                                    <input type="hidden" name="ctl00$H4" id="H4" value="06234357" />
+    </form>
+    <script src="./test.js"></script>
+</body>
+</html>
