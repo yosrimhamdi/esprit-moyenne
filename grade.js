@@ -1,3 +1,28 @@
+const coefs = {
+  'Algorithmique et structure de données': 2,
+  'Analyse numérique': 3,
+  'Bases de Données': 3,
+  'Calcul scientifique avec Python': 2,
+  'Communication, Culture et Citoyenneté  A1': 2,
+  'Communication, Culture et Citoyenneté F1': 2,
+  'Conception par Objet et Programmation Java': 4,
+  'Fondements des Réseaux': 3,
+  'Langage de modélisation (UML)': 3,
+  'Programmation procédurale': 3,
+  'Sys. De Gestion de Bases de Données': 2,
+  'Système et scripting': 2,
+  'Technologies Web 2.0': 3,
+  'RPOJET JAVA': 6,
+};
+
+function getGrade(domString) {
+  const parser = new DOMParser();
+  const parsedHtml = parser.parseFromString(domString, 'text/html');
+  const spanElement = parsedHtml.querySelector('span');
+
+  return parseFloat(spanElement.textContent.replace(',', '.'));
+}
+
 function tableToJson(table) {
   var data = [];
 
@@ -21,10 +46,10 @@ function tableToJson(table) {
   }
 
   data.forEach(x => {
-    x.coef = parseFloat(x.coef.replace(',', '.'));
-    x.note_exam = parseFloat(x.note_exam.replace(',', '.'));
-    x.note_cc = parseFloat(x.note_cc.replace(',', '.'));
-    x.note_tp = parseFloat(x.note_tp.replace(',', '.'));
+    x.coef = coefs[x.designation];
+    x.note_exam = getGrade(x.noteexamprincipale);
+    x.note_cc = getGrade(x.notecc);
+    x.note_tp = getGrade(x.notetp);
   });
   return data;
 }
@@ -83,7 +108,7 @@ function populateTable(data) {
     tableContent += '<tr>';
     tableContent += '<td>' + x.designation + '</td>';
     tableContent += '<td>' + x.coef + '</td>';
-    tableContent += '<td>' + x.nom_ens + '</td>';
+    tableContent += '<td>' + x.nomenseignant + '</td>';
     tableContent += isNaN(x.note_cc)
       ? '<td></td>'
       : '<td>' + x.note_cc + '</td>';
